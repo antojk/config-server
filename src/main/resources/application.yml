@@ -18,5 +18,20 @@ spring:
     config:
       server:
         git:
+          default-label: master
           uri: https://github.com/antojk/storyteller-microservices-config
 #          uri: file:///C:/Users/kc-noorashrafi/Config-repo
+      fail-fast: true
+#     enabled: false
+---
+spring:
+  rabbitmq:
+   host: localhost
+   port: 5672
+
+  cloud:
+   config:
+    server:
+     monitor:
+      github:
+       enabled=true
